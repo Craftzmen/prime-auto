@@ -157,20 +157,20 @@ export function Header() {
       </header>
 
       {/* Mobile menu - Right Side Drawer */}
-      <div 
+      <div
         className={cn(
           "fixed inset-0 z-[100] lg:hidden transition-opacity duration-300",
           mobileOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         )}
       >
         {/* Backdrop */}
-        <div 
+        <div
           className="absolute inset-0 bg-black/60 backdrop-blur-sm"
           onClick={() => setMobileOpen(false)}
         />
-        
+
         {/* Drawer */}
-        <div 
+        <div
           className={cn(
             "absolute top-0 right-0 bottom-0 w-[300px] bg-[#080808] border-l border-white/[0.08] shadow-2xl transition-transform duration-300 ease-out flex flex-col",
             mobileOpen ? "translate-x-0" : "translate-x-full"
@@ -182,9 +182,9 @@ export function Header() {
               alt={siteContent.brand.fullName}
               width={220}
               height={148}
-              className="h-8 w-auto rounded-lg bg-white/95 px-1.5 py-1 object-contain"
+              className="w-24"
             />
-            <button 
+            <button
               onClick={() => setMobileOpen(false)}
               className="w-10 h-10 flex items-center justify-center rounded-full bg-white/[0.05] text-white/70 hover:text-white"
             >
