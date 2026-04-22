@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Phone, X, Zap, CreditCard, ChevronRight } from "lucide-react";
+import { siteContent } from "@/lib/site-content";
 
 export const FinancePopup = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -16,7 +17,7 @@ export const FinancePopup = () => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 640);
     };
-    
+
     checkMobile();
     window.addEventListener("resize", checkMobile);
     return () => window.removeEventListener("resize", checkMobile);
@@ -27,18 +28,17 @@ export const FinancePopup = () => {
       {isVisible && (
         <motion.div
           initial={{ opacity: 0, y: 50, x: isMobile ? 0 : 50, scale: 0.9 }}
-          animate={{ 
-            opacity: 1, 
-            y: 0, 
-            x: 0, 
+          animate={{
+            opacity: 1,
+            y: 0,
+            x: 0,
             scale: 1,
             width: isMinimized ? (isMobile ? 56 : 64) : (isMobile ? "calc(100vw - 32px)" : "400px"),
           }}
           exit={{ opacity: 0, y: 50, x: isMobile ? 0 : 50, scale: 0.9 }}
           transition={{ type: "spring", damping: 25, stiffness: 200 }}
-          className={`fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-[90] border border-white/10 shadow-[0_30px_70px_rgba(0,0,0,0.7)] ${
-            isMinimized ? "p-0 rounded-full" : "rounded-[2rem] sm:rounded-[2.5rem] bg-[#080808]/95 backdrop-blur-3xl"
-          } max-h-[calc(100vh-32px)] flex flex-col`}
+          className={`fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-[90] border border-white/10 shadow-[0_30px_70px_rgba(0,0,0,0.7)] ${isMinimized ? "p-0 rounded-full" : "rounded-[2rem] sm:rounded-[2.5rem] bg-[#080808]/95 backdrop-blur-3xl"
+            } max-h-[calc(100vh-32px)] flex flex-col`}
         >
           {isMinimized ? (
             <motion.button
@@ -93,7 +93,7 @@ export const FinancePopup = () => {
                     </div>
                     <ChevronRight className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-white/20 group-hover:text-primary group-hover:translate-x-1 transition-all" />
                   </div>
-                  
+
                   <div className="flex items-center justify-between rounded-xl sm:rounded-2xl bg-white/[0.04] border border-white/5 p-2.5 sm:p-3.5 hover:bg-white/[0.07] transition-all group cursor-default">
                     <div className="flex items-center gap-2.5 sm:gap-3.5">
                       <div className="flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-lg sm:rounded-xl bg-primary/15 text-primary">
@@ -111,16 +111,16 @@ export const FinancePopup = () => {
                 <div className="relative group pt-0.5 sm:pt-1">
                   <div className="absolute -inset-1 rounded-xl sm:rounded-2xl bg-gradient-to-r from-primary to-[#b91c1c] opacity-20 blur-md group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
                   <a
-                    href="tel:8883968739"
+                    href={siteContent.contact.phoneHref}
                     className="relative flex flex-col items-center justify-center rounded-xl sm:rounded-2xl bg-primary py-3 sm:py-4 px-4 sm:px-6 transition-all hover:bg-primary/90 hover:scale-[1.02] active:scale-95 shadow-[0_10px_20px_rgba(239,68,68,0.3)]"
                   >
                     <div className="flex items-center gap-2.5 sm:gap-3.5">
-                      <span className="text-xl sm:text-2xl font-black tracking-tighter text-white">(888) 396-8739</span>
+                      <span className="text-xl sm:text-2xl font-black tracking-tighter text-white">{siteContent.contact.phoneDisplay}</span>
                       <Phone className="h-4.5 w-4.5 sm:h-5 sm:w-5 text-white animate-pulse" />
                     </div>
                   </a>
                 </div>
-                
+
                 <div className="text-center pt-0.5">
                   <p className="text-[8px] sm:text-[9px] font-black uppercase tracking-[0.4em] text-white/30">
                     Call Right Now
