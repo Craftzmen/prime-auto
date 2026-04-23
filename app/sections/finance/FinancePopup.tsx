@@ -33,7 +33,7 @@ export const FinancePopup = () => {
             y: 0,
             x: 0,
             scale: 1,
-            width: isMinimized ? (isMobile ? 56 : 64) : (isMobile ? "calc(100vw - 32px)" : "400px"),
+            width: isMinimized ? (isMobile ? 56 : 64) : (isMobile ? "calc(100vw - 32px)" : "500px"),
           }}
           exit={{ opacity: 0, y: 50, x: isMobile ? 0 : 50, scale: 0.9 }}
           transition={{ type: "spring", damping: 25, stiffness: 200 }}
@@ -60,7 +60,7 @@ export const FinancePopup = () => {
                   <Phone className="h-5 w-5 sm:h-7 sm:w-7" />
                 </div>
                 <div className="flex flex-col">
-                  <h3 className="text-base sm:text-lg font-black uppercase tracking-wider leading-tight">Make a Payment</h3>
+                  <h3 className="text-base sm:text-lg font-black uppercase tracking-wider leading-tight">Need Finance Assistance?</h3>
                   <div className="flex items-center gap-1.5 sm:gap-2 mt-0.5 sm:mt-1">
                     <span className="flex h-1.5 w-1.5 sm:h-2 sm:w-2">
                       <span className="absolute inline-flex h-1.5 w-1.5 sm:h-2 sm:w-2 animate-ping rounded-full bg-green-400 opacity-75"></span>
@@ -88,7 +88,7 @@ export const FinancePopup = () => {
                         <Zap className="h-4 w-4 sm:h-4.5 sm:w-4.5" />
                       </div>
                       <span className="text-[11px] sm:text-[12px] font-bold uppercase tracking-wide text-white/90">
-                        Need Finance Assistance?
+                        Fast & Easy Application
                       </span>
                     </div>
                     <ChevronRight className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-white/20 group-hover:text-primary group-hover:translate-x-1 transition-all" />
