@@ -9,7 +9,7 @@ const packages = [
   {
     icon: Car,
     title: "New Car Finance",
-    desc: "Structure a new-vehicle purchase around clear monthly obligations and lender requirements.",
+    desc: "Structure a new-vehicle purchase (including Kia and Hyundai models) around clear monthly obligations and lender requirements.",
     features: ["Low down payment options", "Flexible tenure (12–84 months)", "Quick loan approvals", "Transparent documentation"],
   },
   {
@@ -43,7 +43,7 @@ export function PackagesSection() {
 
         <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.08 }} className="relative h-[220px] lg:h-[340px] rounded-[2rem] overflow-hidden border border-white/[0.08] glass-card p-2 mb-10">
           <div className="relative w-full h-full rounded-3xl overflow-hidden">
-            <Image src={siteImages.finance.packages} alt="Finance paperwork and car keys" fill className="object-cover object-center opacity-70" />
+            <Image src={siteImages.finance.packages} alt="Hyundai Sonata showcasing premium sedan finance options" fill className="object-cover object-center opacity-70" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#080808]/80 via-[#080808]/20 to-transparent" />
           </div>
           <div className="absolute bottom-6 left-6 max-w-md rounded-3xl border border-white/[0.08] bg-[#080808]/80 backdrop-blur-md px-5 py-4 text-sm text-white/80">

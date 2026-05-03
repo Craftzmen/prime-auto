@@ -11,7 +11,7 @@ import { FinancePopup } from "../sections/finance/FinancePopup";
 export const metadata = {
   title: "Car Finance and Loan Support in Brooklyn | Prime Auto Deals",
   description:
-    "Prime Auto Deals offers structured financing support for new purchases, used vehicles, and refinancing requests with clear documentation.",
+    "Prime Auto Deals offers structured financing support for Kia and Hyundai vehicles, including new purchases, used models, and refinancing requests.",
 };
 
 export default function FinancePage() {

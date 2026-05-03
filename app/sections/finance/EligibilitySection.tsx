@@ -45,7 +45,7 @@ export function EligibilitySection() {
 
           <motion.div initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="relative h-[320px] lg:h-[460px] rounded-[2rem] overflow-hidden border border-white/[0.08] glass-card p-2">
             <div className="relative w-full h-full rounded-3xl overflow-hidden">
-              <Image src={siteImages.finance.eligibility} alt="Finance eligibility review" fill className="object-cover object-center opacity-80" />
+              <Image src={siteImages.finance.eligibility} alt="Kia vehicle representing modern eligibility standards" fill className="object-cover object-center opacity-80" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#080808]/80 via-[#080808]/15 to-transparent" />
             </div>
           </motion.div>

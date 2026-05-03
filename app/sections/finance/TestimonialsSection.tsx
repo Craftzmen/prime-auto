@@ -27,7 +27,7 @@ export function FinanceTestimonialsSection() {
 
         <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.08 }} className="relative h-[200px] lg:h-[320px] rounded-[2rem] overflow-hidden border border-white/[0.08] glass-card p-2 mb-10 max-w-5xl mx-auto">
           <div className="relative w-full h-full rounded-3xl overflow-hidden">
-            <Image src={siteImages.finance.testimonials} alt="Customer and financial consultation" fill className="object-cover object-center opacity-70" />
+            <Image src={siteImages.finance.testimonials} alt="Kia Sportage representing satisfied customer choice" fill className="object-cover object-center opacity-70" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#080808]/80 via-[#080808]/20 to-transparent" />
           </div>
         </motion.div>

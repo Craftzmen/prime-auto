@@ -20,7 +20,7 @@ export function ApprovalTimelineSection() {
         <div className="grid grid-cols-1 lg:grid-cols-[0.95fr_1.05fr] gap-10 lg:gap-14 items-center">
           <motion.div initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="relative h-[300px] lg:h-[460px] rounded-[2rem] overflow-hidden border border-white/[0.08] order-2 lg:order-1 glass-card p-2">
             <div className="relative w-full h-full rounded-3xl overflow-hidden">
-              <Image src={siteImages.finance.timeline} alt="Finance approval timeline" fill className="object-cover object-center opacity-80" />
+              <Image src={siteImages.finance.timeline} alt="Premium Kia model highlighting efficient finance approval" fill className="object-cover object-center opacity-80" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#080808]/80 via-[#080808]/15 to-transparent" />
             </div>
           </motion.div>
