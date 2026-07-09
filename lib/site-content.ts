@@ -7,8 +7,8 @@ export const siteContent = {
   contact: {
     phoneDisplay: "888 286 8307",
     phoneHref: "tel:+18882868307",
-    email: "query@primeautodeals.tech",
-    emailHref: "mailto:query@primeautodeals.tech",
+    email: "query@primeautodeals.live",
+    emailHref: "mailto:query@primeautodeals.live",
     addressLine1: "1916 E 51ST Street 2FL",
     addressLine2: "Brooklyn, NY 11234",
     fullAddress: "1916 E 51ST Street 2FL, Brooklyn, NY 11234",
