@@ -24,7 +24,7 @@ export const siteContent = {
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Services", href: "/services" },
-    { name: "Finance", href: "/finance" },
+    // { name: "Finance", href: "/finance" },
     { name: "How It Works", href: "/how-it-works" },
     { name: "Contact", href: "/contact" },
   ],
