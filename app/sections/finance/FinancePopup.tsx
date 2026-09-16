@@ -37,8 +37,8 @@ export const FinancePopup = () => {
           }}
           exit={{ opacity: 0, y: 50, x: isMobile ? 0 : 50, scale: 0.9 }}
           transition={{ type: "spring", damping: 25, stiffness: 200 }}
-          className={`fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-[90] border border-white/10 shadow-[0_30px_70px_rgba(0,0,0,0.7)] ${isMinimized ? "p-0 rounded-full" : "rounded-[2rem] sm:rounded-[2.5rem] bg-[#080808]/95 backdrop-blur-3xl"
-            } max-h-[calc(100vh-32px)] flex flex-col`}
+          className={`fixed bottom-[5.75rem] right-4 sm:bottom-[6.25rem] sm:right-6 z-[90] border border-white/10 shadow-[0_30px_70px_rgba(0,0,0,0.7)] ${isMinimized ? "p-0 rounded-full" : "rounded-[2rem] sm:rounded-[2.5rem] bg-[#080808]/95 backdrop-blur-3xl"
+            } max-h-[calc(100vh-7rem)] flex flex-col`}
         >
           {isMinimized ? (
             <motion.a
