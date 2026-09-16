@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
-import { PhoneCall, Menu, X, Mail } from "lucide-react";
+import { PhoneCall, Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { siteContent } from "@/lib/site-content";
 
@@ -29,13 +29,13 @@ export function Header() {
       <div className="fixed top-0 left-0 right-0 z-[60] bg-[#ef4444] text-white py-1.5 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto flex justify-center sm:justify-between items-center text-[12px] font-semibold tracking-wide">
           <div className="flex items-center gap-6">
-            <a href={siteContent.contact.phoneHref} className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-              <PhoneCall className="w-3.5 h-3.5" />
+            <a
+              href={siteContent.contact.phoneHref}
+              title={`Call ${siteContent.contact.phoneDisplay}`}
+              className="flex min-h-11 items-center gap-2 px-2 hover:opacity-80 transition-opacity active:opacity-90"
+            >
+              <PhoneCall className="w-3.5 h-3.5 shrink-0" />
               <span>{siteContent.contact.phoneDisplay}</span>
-            </a>
-            <a href={siteContent.contact.emailHref} className="hidden sm:flex items-center gap-2 hover:opacity-80 transition-opacity">
-              <Mail className="w-3.5 h-3.5" />
-              <span>{siteContent.contact.email}</span>
             </a>
           </div>
           <div className="hidden sm:block opacity-90">
@@ -97,12 +97,13 @@ export function Header() {
             })}
           </nav>
 
-          {/* Right side — phone + email + CTA */}
+          {/* Right side — phone + CTA */}
           <div className="flex items-center gap-3 lg:gap-5 shrink-0">
             <div className="hidden lg:flex items-center gap-4 mr-2">
               <a
                 href={siteContent.contact.phoneHref}
-                className="flex items-center gap-2.5 text-white/70 hover:text-white transition-colors text-sm group"
+                title={`Call ${siteContent.contact.phoneDisplay}`}
+                className="flex min-h-11 items-center gap-2.5 px-1 text-white/70 hover:text-white transition-colors text-sm group active:opacity-90"
               >
                 <div className="w-8 h-8 rounded-full bg-white/[0.05] border border-white/[0.08] flex items-center justify-center group-hover:bg-[#ef4444] group-hover:border-[#ef4444] transition-all">
                   <PhoneCall className="w-3.5 h-3.5" />
@@ -111,23 +112,12 @@ export function Header() {
                   {siteContent.contact.phoneDisplay}
                 </span>
               </a>
-              <a
-                href={siteContent.contact.emailHref}
-                className="flex items-center gap-2.5 text-white/70 hover:text-white transition-colors text-sm group"
-              >
-                <div className="w-8 h-8 rounded-full bg-white/[0.05] border border-white/[0.08] flex items-center justify-center group-hover:bg-[#ef4444] group-hover:border-[#ef4444] transition-all">
-                  <Mail className="w-3.5 h-3.5" />
-                </div>
-                <span className="hidden xl:inline font-medium text-[14px]">
-                  {siteContent.contact.email}
-                </span>
-              </a>
             </div>
 
-            {/* Mobile/Tablet Phone Icon (visible on smaller screens) */}
             <a
               href={siteContent.contact.phoneHref}
-              className="lg:hidden flex items-center gap-2.5 text-white/70 hover:text-white transition-colors text-sm group"
+              title={`Call ${siteContent.contact.phoneDisplay}`}
+              className="lg:hidden flex min-h-11 items-center gap-2.5 text-white/70 hover:text-white transition-colors text-sm group active:opacity-90"
             >
               <div className="w-9 h-9 rounded-full bg-white/[0.05] border border-white/[0.08] flex items-center justify-center group-hover:bg-[#ef4444] group-hover:border-[#ef4444] transition-all">
                 <PhoneCall className="w-4 h-4" />
@@ -217,26 +207,16 @@ export function Header() {
           </nav>
 
           <div className="p-6 border-t border-white/[0.08] bg-white/[0.02] flex flex-col gap-4">
-            <div className="flex flex-col gap-3">
-              <a
-                href={siteContent.contact.phoneHref}
-                className="flex items-center gap-3 text-white/70 hover:text-white transition-colors"
-              >
-                <div className="w-9 h-9 rounded-full bg-white/[0.05] flex items-center justify-center">
-                  <PhoneCall className="w-4 h-4 text-[#ef4444]" />
-                </div>
-                <span className="font-medium text-[15px]">{siteContent.contact.phoneDisplay}</span>
-              </a>
-              <a
-                href={siteContent.contact.emailHref}
-                className="flex items-center gap-3 text-white/70 hover:text-white transition-colors"
-              >
-                <div className="w-9 h-9 rounded-full bg-white/[0.05] flex items-center justify-center">
-                  <Mail className="w-4 h-4 text-[#ef4444]" />
-                </div>
-                <span className="font-medium text-[15px] truncate">{siteContent.contact.email}</span>
-              </a>
-            </div>
+            <a
+              href={siteContent.contact.phoneHref}
+              title={`Call ${siteContent.contact.phoneDisplay}`}
+              className="flex min-h-11 items-center gap-3 text-white/70 hover:text-white transition-colors active:opacity-90"
+            >
+              <div className="w-9 h-9 rounded-full bg-white/[0.05] flex items-center justify-center shrink-0">
+                <PhoneCall className="w-4 h-4 text-[#ef4444]" />
+              </div>
+              <span className="font-medium text-[15px]">{siteContent.contact.phoneDisplay}</span>
+            </a>
             <Link
               href="/contact"
               onClick={() => setMobileOpen(false)}

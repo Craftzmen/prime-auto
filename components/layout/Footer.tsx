@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { PhoneCall, Mail, MapPin, Clock, ArrowRight } from "lucide-react";
+import { PhoneCall, Clock, ArrowRight } from "lucide-react";
 import { siteContent } from "@/lib/site-content";
 import { cn } from "@/lib/utils";
 
@@ -33,14 +33,14 @@ export function Footer() {
               maintenance planning, and repair execution designed to reduce
               downtime and protect long-term vehicle reliability.
             </p>
-            <div className="flex gap-4 mt-2">
-              <a href={siteContent.contact.phoneHref} className="w-10 h-10 rounded-full bg-white/[0.03] border border-white/[0.08] flex items-center justify-center hover:bg-[#ef4444] hover:border-[#ef4444] hover:text-white transition-all">
-                <PhoneCall className="w-4 h-4" />
-              </a>
-              <a href={siteContent.contact.emailHref} className="w-10 h-10 rounded-full bg-white/[0.03] border border-white/[0.08] flex items-center justify-center hover:bg-[#ef4444] hover:border-[#ef4444] hover:text-white transition-all">
-                <Mail className="w-4 h-4" />
-              </a>
-            </div>
+            <a
+              href={siteContent.contact.phoneHref}
+              title={`Call ${siteContent.contact.phoneDisplay}`}
+              className="mt-2 inline-flex min-h-11 items-center gap-3 rounded-full border border-white/[0.08] bg-white/[0.03] px-4 py-2 hover:border-[#ef4444] hover:bg-[#ef4444]/10 transition-all active:opacity-90 w-fit"
+            >
+              <PhoneCall className="w-4 h-4 text-[#ef4444]" />
+              <span className="text-sm font-semibold text-white/80">{siteContent.contact.phoneDisplay}</span>
+            </a>
           </div>
 
           {/* Quick Links */}
@@ -102,40 +102,22 @@ export function Footer() {
               Contact
             </h3>
             <ul className="flex flex-col gap-6">
-              <li className="flex items-start gap-4">
-                <div className="w-8 h-8 rounded-lg bg-white/[0.03] border border-white/[0.08] flex items-center justify-center shrink-0">
-                  <PhoneCall className="w-4 h-4 text-[#ef4444]" />
-                </div>
-                <div className="flex flex-col pt-1">
-                  <span className="text-white/40 text-[12px] font-bold uppercase tracking-wider mb-0.5">Call Us</span>
-                  <a href={siteContent.contact.phoneHref} className="text-[15px] text-white/60 hover:text-white transition-colors">
-                    {siteContent.contact.phoneDisplay}
-                  </a>
-                </div>
-              </li>
-              <li className="flex items-start gap-4">
-                <div className="w-8 h-8 rounded-lg bg-white/[0.03] border border-white/[0.08] flex items-center justify-center shrink-0">
-                  <Mail className="w-4 h-4 text-[#ef4444]" />
-                </div>
-                <div className="flex flex-col pt-1">
-                  <span className="text-white/40 text-[12px] font-bold uppercase tracking-wider mb-0.5">Email Us</span>
-                  <a href={siteContent.contact.emailHref} className="text-[15px] text-white/60 hover:text-white transition-colors">
-                    {siteContent.contact.email}
-                  </a>
-                </div>
-              </li>
-              <li className="flex items-start gap-4">
-                <div className="w-8 h-8 rounded-lg bg-white/[0.03] border border-white/[0.08] flex items-center justify-center shrink-0">
-                  <MapPin className="w-4 h-4 text-[#ef4444]" />
-                </div>
-                <div className="flex flex-col pt-1">
-                  <span className="text-white/40 text-[12px] font-bold uppercase tracking-wider mb-0.5">Visit Us</span>
-                  <span className="text-[15px] text-white/60 leading-relaxed">
-                    {siteContent.contact.addressLine1}
-                    <br />
-                    {siteContent.contact.addressLine2}
-                  </span>
-                </div>
+              <li>
+                <a
+                  href={siteContent.contact.phoneHref}
+                  title={`Call ${siteContent.contact.phoneDisplay}`}
+                  className="flex min-h-11 items-start gap-4 rounded-lg py-2 active:opacity-90"
+                >
+                  <div className="w-8 h-8 rounded-lg bg-white/[0.03] border border-white/[0.08] flex items-center justify-center shrink-0">
+                    <PhoneCall className="w-4 h-4 text-[#ef4444]" />
+                  </div>
+                  <div className="flex flex-col pt-1">
+                    <span className="text-white/40 text-[12px] font-bold uppercase tracking-wider mb-0.5">Call Us</span>
+                    <span className="text-[15px] font-medium text-white/60 hover:text-white transition-colors">
+                      {siteContent.contact.phoneDisplay}
+                    </span>
+                  </div>
+                </a>
               </li>
               <li className="flex items-start gap-4">
                 <div className="w-8 h-8 rounded-lg bg-white/[0.03] border border-white/[0.08] flex items-center justify-center shrink-0">

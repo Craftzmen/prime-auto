@@ -41,17 +41,18 @@ export const FinancePopup = () => {
             } max-h-[calc(100vh-32px)] flex flex-col`}
         >
           {isMinimized ? (
-            <motion.button
+            <motion.a
               layoutId="popup-container"
-              onClick={() => setIsMinimized(false)}
-              className="relative flex h-14 w-14 sm:h-16 sm:w-16 items-center justify-center bg-primary text-white shadow-lg transition-transform hover:scale-110 active:scale-95 rounded-full"
+              href={siteContent.contact.phoneHref}
+              title={`Call ${siteContent.contact.phoneDisplay}`}
+              className="relative flex h-14 w-14 min-h-14 min-w-14 sm:h-16 sm:w-16 items-center justify-center bg-primary text-white shadow-lg transition-transform hover:scale-110 active:scale-95 rounded-full"
             >
               <Phone className="h-6 w-6 sm:h-7 sm:w-7" />
               <span className="absolute top-0 right-0 flex h-4 w-4 sm:h-5 sm:w-5">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
                 <span className="relative inline-flex h-4 w-4 sm:h-5 sm:w-5 rounded-full bg-green-500 border-2 border-[#080808]"></span>
               </span>
-            </motion.button>
+            </motion.a>
           ) : (
             <motion.div layoutId="popup-container" className="flex flex-col h-full overflow-hidden rounded-[2rem] sm:rounded-[2.5rem]">
               {/* Header */}
@@ -112,19 +113,17 @@ export const FinancePopup = () => {
                   <div className="absolute -inset-1 rounded-xl sm:rounded-2xl bg-gradient-to-r from-primary to-[#b91c1c] opacity-20 blur-md group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
                   <a
                     href={siteContent.contact.phoneHref}
-                    className="relative flex flex-col items-center justify-center rounded-xl sm:rounded-2xl bg-primary py-3 sm:py-4 px-4 sm:px-6 transition-all hover:bg-primary/90 hover:scale-[1.02] active:scale-95 shadow-[0_10px_20px_rgba(239,68,68,0.3)]"
+                    title={`Call ${siteContent.contact.phoneDisplay}`}
+                    className="relative flex min-h-11 w-full flex-col items-center justify-center rounded-xl sm:rounded-2xl bg-primary py-3 sm:py-4 px-4 sm:px-6 transition-all hover:bg-primary/90 hover:scale-[1.02] active:scale-95 shadow-[0_10px_20px_rgba(239,68,68,0.3)]"
                   >
                     <div className="flex items-center gap-2.5 sm:gap-3.5">
                       <span className="text-xl sm:text-2xl font-black tracking-tighter text-white">{siteContent.contact.phoneDisplay}</span>
                       <Phone className="h-4.5 w-4.5 sm:h-5 sm:w-5 text-white animate-pulse" />
                     </div>
+                    <p className="mt-1 text-[8px] sm:text-[9px] font-black uppercase tracking-[0.4em] text-white/50">
+                      Call Right Now
+                    </p>
                   </a>
-                </div>
-
-                <div className="text-center pt-0.5">
-                  <p className="text-[8px] sm:text-[9px] font-black uppercase tracking-[0.4em] text-white/30">
-                    Call Right Now
-                  </p>
                 </div>
               </div>
             </motion.div>

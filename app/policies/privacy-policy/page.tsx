@@ -29,7 +29,7 @@ const sections = [
   },
   {
     title: "Contact Us",
-    content: `If you have questions about this policy or how your information is handled, contact ${siteContent.contact.email} or visit our Brooklyn location at ${siteContent.contact.fullAddress}.`,
+    content: `If you have questions about this policy or how your information is handled, call ${siteContent.contact.phoneDisplay}.`,
   },
 ];
 
@@ -130,14 +130,13 @@ export default function PrivacyPolicyPage() {
                   <p className="text-[15px] text-white/50 leading-relaxed mb-8">
                     If you want to ask a question about the data we hold, use the direct contact details below so the request reaches the right team.
                   </p>
-                  <div className="flex flex-col gap-4">
-                    <Link href={siteContent.contact.emailHref} className="w-full bg-[#ef4444] hover:bg-[#dc2626] text-white px-8 py-4 rounded-full font-bold text-[15px] transition-all flex items-center justify-center shadow-[0_0_20px_rgba(239,68,68,0.25)] hover:shadow-[0_0_30px_rgba(239,68,68,0.4)] hover:-translate-y-1">
-                      Email privacy team
-                    </Link>
-                    <a href={siteContent.contact.phoneHref} className="w-full border border-white/10 glass hover:bg-white/10 text-white px-8 py-4 rounded-full font-bold text-[15px] transition-all flex items-center justify-center hover:-translate-y-1">
-                      Call {siteContent.contact.phoneDisplay}
-                    </a>
-                  </div>
+                  <a
+                    href={siteContent.contact.phoneHref}
+                    title={`Call ${siteContent.contact.phoneDisplay}`}
+                    className="flex min-h-11 w-full items-center justify-center rounded-full bg-[#ef4444] px-8 py-4 text-[15px] font-bold text-white shadow-[0_0_20px_rgba(239,68,68,0.25)] transition-all hover:-translate-y-1 hover:bg-[#dc2626] hover:shadow-[0_0_30px_rgba(239,68,68,0.4)] active:opacity-90"
+                  >
+                    Call {siteContent.contact.phoneDisplay}
+                  </a>
                 </div>
               </motion.div>
             </div>

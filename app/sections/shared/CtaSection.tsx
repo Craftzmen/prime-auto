@@ -69,7 +69,8 @@ export function SharedCtaSection({
               </Link>
               <a
                 href={siteContent.contact.phoneHref}
-                className="w-full sm:w-auto border border-white/10 glass hover:bg-white/10 text-white px-8 py-4 rounded-full font-bold text-[15px] transition-all inline-flex items-center justify-center gap-2.5 hover:-translate-y-1"
+                title={`Call ${siteContent.contact.phoneDisplay}`}
+                className="w-full sm:w-auto min-h-11 border border-white/10 glass hover:bg-white/10 text-white px-8 py-4 rounded-full font-bold text-[15px] transition-all inline-flex items-center justify-center gap-2.5 hover:-translate-y-1 active:opacity-90"
               >
                 <PhoneCall className="w-4 h-4 text-[#ef4444]" />
                 {siteContent.contact.phoneDisplay}

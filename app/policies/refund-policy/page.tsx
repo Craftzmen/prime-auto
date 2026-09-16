@@ -21,11 +21,11 @@ const sections = [
   },
   {
     title: "How to File a Claim",
-    content: `To file a claim, contact ${siteContent.contact.email} or call ${siteContent.contact.phoneDisplay} with the invoice, the service date, and a description of the issue. We may request photographs, a reinspection, or additional context before making a final decision. Claims are reviewed in the order received and prioritized by impact and safety.`,
+    content: `To file a claim, call ${siteContent.contact.phoneDisplay} with the invoice, the service date, and a description of the issue. We may request photographs, a reinspection, or additional context before making a final decision. Claims are reviewed in the order received and prioritized by impact and safety.`,
   },
   {
     title: "Contact",
-    content: `For warranty or refund questions, reach out by email, phone, or in person at ${siteContent.contact.fullAddress}. We are available ${siteContent.hours.weekdayLabel} during ${siteContent.hours.weekdayHours}.`,
+    content: `For warranty or refund questions, call ${siteContent.contact.phoneDisplay}. We are available ${siteContent.hours.weekdayLabel} during ${siteContent.hours.weekdayHours}.`,
   },
 ];
 
@@ -127,14 +127,13 @@ export default function RefundPolicyPage() {
                   <p className="text-[15px] text-white/50 leading-relaxed mb-8">
                     If you need help with a claim, contact the service team using the direct channels below. Please include the invoice number and the date of service.
                   </p>
-                  <div className="flex flex-col gap-4">
-                    <Link href={siteContent.contact.emailHref} className="w-full bg-[#ef4444] hover:bg-[#dc2626] text-white px-8 py-4 rounded-full font-bold text-[15px] transition-all flex items-center justify-center shadow-[0_0_20px_rgba(239,68,68,0.25)] hover:shadow-[0_0_30px_rgba(239,68,68,0.4)] hover:-translate-y-1">
-                      Email claims team
-                    </Link>
-                    <a href={siteContent.contact.phoneHref} className="w-full border border-white/10 glass hover:bg-white/10 text-white px-8 py-4 rounded-full font-bold text-[15px] transition-all flex items-center justify-center hover:-translate-y-1">
-                      Call {siteContent.contact.phoneDisplay}
-                    </a>
-                  </div>
+                  <a
+                    href={siteContent.contact.phoneHref}
+                    title={`Call ${siteContent.contact.phoneDisplay}`}
+                    className="flex min-h-11 w-full items-center justify-center rounded-full bg-[#ef4444] px-8 py-4 text-[15px] font-bold text-white shadow-[0_0_20px_rgba(239,68,68,0.25)] transition-all hover:-translate-y-1 hover:bg-[#dc2626] hover:shadow-[0_0_30px_rgba(239,68,68,0.4)] active:opacity-90"
+                  >
+                    Call {siteContent.contact.phoneDisplay}
+                  </a>
                 </div>
               </motion.div>
             </div>
