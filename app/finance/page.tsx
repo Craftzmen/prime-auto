@@ -10,6 +10,7 @@ import { notFound } from "next/navigation";
 // import { FinanceFaqSection } from "../sections/finance/FinanceFaqSection";
 // import { FinanceCtaSection } from "../sections/finance/CtaSection";
 // import { FinancePopup } from "../sections/finance/FinancePopup";
+// import { CallNowBar } from "@/components/layout/CallNowBar";
 //
 // export const metadata = {
 //   title: "Car Finance and Loan Support in Brooklyn | Prime Auto Deals",
@@ -19,7 +20,7 @@ import { notFound } from "next/navigation";
 //
 // export default function FinancePage() {
 //   return (
-//     <>
+//     <div className="pb-28">
 //       <FinanceHeroSection />
 //       <PackagesSection />
 //       <AdvantageSection />
@@ -29,7 +30,8 @@ import { notFound } from "next/navigation";
 //       <FinanceFaqSection />
 //       <FinanceCtaSection />
 //       <FinancePopup />
-//     </>
+//       <CallNowBar />
+//     </div>
 //   );
 // }
 

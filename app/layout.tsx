@@ -3,7 +3,6 @@ import { Outfit } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Header } from "@/components/layout/Header";
-import { CallNowBar } from "@/components/layout/CallNowBar";
 import { Footer } from "@/components/layout/Footer";
 import { siteContent } from "@/lib/site-content";
 
@@ -50,9 +49,8 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-[#080808] text-white">
         <Header />
-        <main className="flex-1 flex flex-col pb-28">{children}</main>
+        <main className="flex-1 flex flex-col">{children}</main>
         <Footer />
-        <CallNowBar />
       </body>
     </html>
   );
