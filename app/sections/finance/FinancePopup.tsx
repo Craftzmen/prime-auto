@@ -114,7 +114,7 @@ export const FinancePopup = () => {
                   <a
                     href={siteContent.contact.phoneHref}
                     title={`Call ${siteContent.contact.phoneDisplay}`}
-                    className="relative flex min-h-11 w-full flex-col items-center justify-center rounded-xl sm:rounded-2xl bg-emerald-500 py-3 sm:py-4 px-4 sm:px-6 text-white shadow-[0_4px_28px_rgba(16,185,129,0.45)] ring-2 ring-emerald-300/40 transition-all hover:bg-emerald-400 hover:scale-[1.02] active:scale-95"
+                    className="relative flex min-h-11 w-full flex-col items-center justify-center rounded-full bg-emerald-500 py-3 sm:py-4 px-4 sm:px-6 text-white shadow-[0_4px_28px_rgba(16,185,129,0.45)] ring-2 ring-emerald-300/40 transition-all hover:bg-emerald-400 hover:scale-[1.02] active:scale-95"
                   >
                     <div className="flex items-center gap-2.5 sm:gap-3.5">
                       <span className="text-xl sm:text-2xl font-black tracking-tighter text-white">{siteContent.contact.phoneDisplay}</span>
