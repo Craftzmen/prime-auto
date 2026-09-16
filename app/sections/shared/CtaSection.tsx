@@ -13,6 +13,7 @@ interface SharedCtaSectionProps {
   imageSrc?: string;
   imageAlt?: string;
   imageCaption?: string;
+  phoneButtonVariant?: "default" | "highlight";
 }
 
 export function SharedCtaSection({
@@ -21,6 +22,7 @@ export function SharedCtaSection({
   imageSrc,
   imageAlt,
   imageCaption,
+  phoneButtonVariant = "default",
 }: SharedCtaSectionProps) {
   const hasImage = Boolean(imageSrc);
 
@@ -70,9 +72,14 @@ export function SharedCtaSection({
               <a
                 href={siteContent.contact.phoneHref}
                 title={`Call ${siteContent.contact.phoneDisplay}`}
-                className="w-full sm:w-auto min-h-11 border border-white/10 glass hover:bg-white/10 text-white px-8 py-4 rounded-full font-bold text-[15px] transition-all inline-flex items-center justify-center gap-2.5 hover:-translate-y-1 active:opacity-90"
+                className={cn(
+                  "inline-flex min-h-11 w-full items-center justify-center gap-2.5 rounded-full px-8 py-4 text-[15px] font-bold transition-all hover:-translate-y-1 active:opacity-90 sm:w-auto",
+                  phoneButtonVariant === "highlight"
+                    ? "bg-emerald-500 text-white shadow-[0_4px_28px_rgba(16,185,129,0.45)] ring-2 ring-emerald-300/40 hover:bg-emerald-400"
+                    : "border border-white/10 glass text-white hover:bg-white/10"
+                )}
               >
-                <PhoneCall className="w-4 h-4 text-[#ef4444]" />
+                <PhoneCall className={cn("w-4 h-4", phoneButtonVariant === "highlight" ? "text-white" : "text-[#ef4444]")} />
                 {siteContent.contact.phoneDisplay}
               </a>
             </div>

@@ -11,6 +11,7 @@ export function FinanceCtaSection() {
       imageSrc={siteImages.finance.timeline}
       imageAlt="Finance application review"
       imageCaption="Every approval path is mapped to documentation and repayment planning"
+      phoneButtonVariant="highlight"
     />
   );
 }

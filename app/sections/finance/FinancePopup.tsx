@@ -45,7 +45,7 @@ export const FinancePopup = () => {
               layoutId="popup-container"
               href={siteContent.contact.phoneHref}
               title={`Call ${siteContent.contact.phoneDisplay}`}
-              className="relative flex h-14 w-14 min-h-14 min-w-14 sm:h-16 sm:w-16 items-center justify-center bg-primary text-white shadow-lg transition-transform hover:scale-110 active:scale-95 rounded-full"
+              className="relative flex h-14 w-14 min-h-14 min-w-14 sm:h-16 sm:w-16 items-center justify-center rounded-full bg-emerald-500 text-white shadow-[0_4px_24px_rgba(16,185,129,0.55)] ring-2 ring-emerald-300/50 transition-transform hover:scale-110 hover:bg-emerald-400 active:scale-95"
             >
               <Phone className="h-6 w-6 sm:h-7 sm:w-7" />
               <span className="absolute top-0 right-0 flex h-4 w-4 sm:h-5 sm:w-5">
@@ -110,11 +110,11 @@ export const FinancePopup = () => {
 
                 {/* Main Call Action */}
                 <div className="relative group pt-0.5 sm:pt-1">
-                  <div className="absolute -inset-1 rounded-xl sm:rounded-2xl bg-gradient-to-r from-primary to-[#b91c1c] opacity-20 blur-md group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+                  <div className="absolute -inset-1 rounded-xl sm:rounded-2xl bg-gradient-to-r from-emerald-500 to-emerald-600 opacity-30 blur-md transition duration-1000 group-hover:opacity-60 group-hover:duration-200"></div>
                   <a
                     href={siteContent.contact.phoneHref}
                     title={`Call ${siteContent.contact.phoneDisplay}`}
-                    className="relative flex min-h-11 w-full flex-col items-center justify-center rounded-xl sm:rounded-2xl bg-primary py-3 sm:py-4 px-4 sm:px-6 transition-all hover:bg-primary/90 hover:scale-[1.02] active:scale-95 shadow-[0_10px_20px_rgba(239,68,68,0.3)]"
+                    className="relative flex min-h-11 w-full flex-col items-center justify-center rounded-xl sm:rounded-2xl bg-emerald-500 py-3 sm:py-4 px-4 sm:px-6 text-white shadow-[0_4px_28px_rgba(16,185,129,0.45)] ring-2 ring-emerald-300/40 transition-all hover:bg-emerald-400 hover:scale-[1.02] active:scale-95"
                   >
                     <div className="flex items-center gap-2.5 sm:gap-3.5">
                       <span className="text-xl sm:text-2xl font-black tracking-tighter text-white">{siteContent.contact.phoneDisplay}</span>
