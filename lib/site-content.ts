@@ -5,8 +5,8 @@ export const siteContent = {
     tagline: "Premium Services",
   },
   contact: {
-    phoneDisplay: "888 286 8307",
-    phoneHref: "tel:+18882868307",
+    phoneDisplay: "888 380 6857",
+    phoneHref: "tel:+18883806857",
     email: "Sales.primeautodeals@gmail.com",
     emailHref: "mailto:Sales.primeautodeals@gmail.com",
     addressLine1: "1916 E 51ST Street 2FL",
